@@ -136,14 +136,21 @@ tags: []
 
 ## 工作流
 
-### Ingest
-1. 资料存到 `raw/` 对应子目录
-2. 读取内容，讨论关键要点
-3. 在 `wiki/papers/` 创建摘要页
-4. 更新/创建相关实体页和概念页
-5. 更新 `wiki/index.md`
-6. 追加 `wiki/log.md`：`## [YYYY-MM-DD] ingest | 标题`
-7. 汇报触及页面数
+### Ingest（两步走，不可跳过任何一步）
+
+**第一步：保存原文到 raw/**
+- 从 URL 获取文章完整原文，保存到 `raw/` 对应子目录（articles/、papers/、data/、images/）
+- **不管原文多长，必须保存完整全文，不可用 AI 总结替代**
+- 文件命名：`来源_日期_标题关键字.md`
+- raw/ 目录只进不改，不可删除或修改原始资料
+
+**第二步：读取 raw/ 创建 Wiki 页面**
+- 读取 raw/ 中的原文
+- 在 `wiki/papers/` 创建摘要页（按页面格式）
+- 更新/创建相关实体页和概念页
+- 更新 `wiki/index.md`
+- 追加 `wiki/log.md`：`## [YYYY-MM-DD] ingest | 标题`
+- 汇报触及页面数
 
 ### Query
 1. 读 `wiki/index.md` 定位相关页面
