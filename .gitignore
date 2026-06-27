@@ -13,4 +13,8 @@ venv/
 .idea/
 *.swp
 *.swo
-".playwright-cli/"  
+".playwright-cli/"
+
+# Auth & config
+.env
+.workbuddy/
